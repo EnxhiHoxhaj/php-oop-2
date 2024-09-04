@@ -1,7 +1,7 @@
 <?php
 
 // includo gli altri file nel mio index
-require_once __DIR__ . '/Model/Shop.php';
+require_once __DIR__ . '/Model/Product.php';
 require_once __DIR__ . '/Model/Cat.php';
 require_once __DIR__ . '/Model/Dog.php';
 require_once __DIR__ . '/Model/Db.php';
