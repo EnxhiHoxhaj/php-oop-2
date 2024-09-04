@@ -54,35 +54,34 @@ require_once __DIR__ . '/Model/Db.php';
                 <?php endforeach; ?>
             </div>
         </div>
-
         <h3>Prodotti per gatti:</h3>
         <div class="shop">
             <div class="card">
-                <ul>
-                    <li class="image">
-                        <div></div>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Prodotto: </strong></span>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Marca: </strong></span>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Categoria: </strong></span>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Descrizione: </strong></span>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Prodotto: </strong></span>
-                    </li>
-                    <li class="info-product">
-                        <span><strong>Prezzo: </strong></span>
-                    </li>
-                </ul>
+                <?php foreach ($catProducts as $cProduct): ?>
+                    <ul>
+                        <li class="image">
+                            <img src="<?php echo htmlspecialchars($cProduct->image); ?>" alt="<?php echo htmlspecialchars($cProduct->name); ?>">
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Prodotto: </strong><?php echo $cProduct->name; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Marca: </strong> </strong><?php echo $cProduct->brend; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Categoria: </strong> </strong><?php echo $cProduct->categori; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Descrizione: </strong> </strong><?php echo $cProduct->description; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Prezzo: </strong> </strong><?php echo $cProduct->price; ?></span>
+                        </li>
+                    </ul>
+                <?php endforeach; ?>
             </div>
         </div>
+
     </div>
 
 

@@ -8,6 +8,7 @@
 h1 {
     color: darkolivegreen;
     font-size: 50px;
+    margin-bottom: 10px;
 }
 
 .shop {
@@ -37,4 +38,10 @@ li {
 
 img {
     width: 80%;
+}
+
+h3 {
+    color: darkslategrey;
+    font-size: 35px;
+    margin: 25px 0 5px;
 }
