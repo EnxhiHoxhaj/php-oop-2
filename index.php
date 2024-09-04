@@ -15,13 +15,75 @@ require_once __DIR__ . '/Model/Db.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <div>
+        <div id="name">
+            <h1>Pet Shop 'Bau e Miao'</h1>
+        </div>
+        <h3>Prodotti per cani:</h3>
+        <div class="shop">
+            <div class="card">
+                <?php foreach ($dogProducts as $dProduct): ?>
+                    <ul>
+                        <li class="image">
+                            <img src="<?php echo htmlspecialchars($dProduct->image); ?>" alt="<?php echo htmlspecialchars($dProduct->name); ?>">
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Prodotto: </strong><?php echo $dProduct->name; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Marca: </strong> </strong><?php echo $dProduct->brend; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Categoria: </strong> </strong><?php echo $dProduct->categori; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Descrizione: </strong> </strong><?php echo $dProduct->description; ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Prezzo: </strong> </strong><?php echo $dProduct->price; ?></span>
+                        </li>
+                    </ul>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <h3>Prodotti per gatti:</h3>
+        <div class="shop">
+            <div class="card">
+                <ul>
+                    <li class="image">
+                        <div></div>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Prodotto: </strong></span>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Marca: </strong></span>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Categoria: </strong></span>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Descrizione: </strong></span>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Prodotto: </strong></span>
+                    </li>
+                    <li class="info-product">
+                        <span><strong>Prezzo: </strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 </body>
