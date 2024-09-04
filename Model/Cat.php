@@ -2,11 +2,10 @@
 
 class Cat extends Product
 {
-    public $animal;
+    public static $cat = 'Gatto';
 
-    public function __construct(string $_name, string  $_brend, string  $_categori, string  $_description, int $_price, string  $_animal)
+    public function __construct(string $_name, string  $_brend, string  $_categori, string  $_description, string $_price)
     {
         parent::__construct($_name, $_brend, $_categori, $_description, $_price);
-        $this->animal = $_animal;
     }
 }
