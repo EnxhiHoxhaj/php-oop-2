@@ -50,6 +50,9 @@ require_once __DIR__ . '/Model/Db.php';
                         <li class="info-product">
                             <span><strong>Prezzo: </strong> </strong><?php echo $dProduct->price; ?></span>
                         </li>
+                        <li class="info-product">
+                            <span><strong>Animale: </strong> </strong><?php echo $dProduct; ?></span>
+                        </li>
                     </ul>
                 <?php endforeach; ?>
             </div>
