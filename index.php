@@ -27,8 +27,8 @@ require_once __DIR__ . '/Model/Db.php';
         <div id="name">
             <h1>Pet Shop 'Bau e Miao'</h1>
         </div>
-        <h3>Prodotti per cani:</h3>
         <div class="shop">
+            <h3>La nostra selezione per il tuo amico a 4 zampe</h3>
             <div class="card">
                 <?php foreach ($shopProducts as $dProduct): ?>
                     <ul>
@@ -51,7 +51,7 @@ require_once __DIR__ . '/Model/Db.php';
                             <span><strong>Prezzo: </strong> </strong><?php echo $dProduct->price; ?></span>
                         </li>
                         <li class="info-product">
-                            <span><strong>Animale: </strong> </strong><?php echo $dProduct; ?></span>
+                            <span><strong>Animale: </strong> </strong><?php echo $dProduct->animal ?></span>
                         </li>
                     </ul>
                 <?php endforeach; ?>

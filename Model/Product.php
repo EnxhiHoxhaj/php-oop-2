@@ -12,11 +12,23 @@ class Product
     public function __construct($_image, $_name, $_brend, $_categori, $_description, $_price, $_animal)
     {
         $this->image = $_image;
-        $this->name = $_name;
+        $this->setName($_name);
         $this->brend = $_brend;
         $this->categori = $_categori;
         $this->description = $_description;
         $this->price = $_price;
         $this->animal = $_animal;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        if (empty($name) || strlen($name) < 4) {
+            throw new Exception('Il prodotto che hai inserito deve avere almeno 4 caratteri');
+        }
     }
 }
