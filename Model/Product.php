@@ -2,7 +2,7 @@
 class Product
 {
     public $image;
-    public $name;
+    protected $name;
     public $brend;
     public $categori;
     public $description;
@@ -27,8 +27,9 @@ class Product
 
     public function setName($name)
     {
-        if (empty($name) || strlen($name) < 4) {
+        if (empty($name) || strlen($name) <= 3) {
             throw new Exception('Il prodotto che hai inserito deve avere almeno 4 caratteri');
         }
+        $this->name = $name;
     }
 }

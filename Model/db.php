@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Dog.php';
+require_once __DIR__ . '/Cat.php';
+
+
 // Prodotti per cani
 
 $prodotto1 = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane');
@@ -24,3 +29,5 @@ $shopProducts = [
     new Cat('./img/CrazyCatnipMeows_grande.webp', 'Snack per Gatti "Catnip Bites"', 'Petstages', 'Cibo/Giochi', 'Deliziosi snack croccanti ripieni di erba gatta, ideali per stimolare l\'attività e il gioco. Perfetti come premio durante l\'allenamento o semplicemente per viziare il tuo gatto.', 4.99, 'Gatto'),
 
 ];
+
+var_dump($shopProducts);

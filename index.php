@@ -33,10 +33,10 @@ require_once __DIR__ . '/Model/Db.php';
                 <?php foreach ($shopProducts as $dProduct): ?>
                     <ul>
                         <li class="image">
-                            <img src="<?php echo htmlspecialchars($dProduct->image); ?>" alt="<?php echo htmlspecialchars($dProduct->name); ?>">
+                            <img src="<?php echo htmlspecialchars($dProduct->image); ?>" alt="">
                         </li>
                         <li class="info-product">
-                            <span><strong>Prodotto: </strong><?php echo $dProduct->name; ?></span>
+                            <span><strong>Prodotto: </strong><?php echo $dProduct->getName(); ?></span>
                         </li>
                         <li class="info-product">
                             <span><strong>Marca: </strong> </strong><?php echo $dProduct->brend; ?></span>

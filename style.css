@@ -6,7 +6,7 @@
 }
 
 h1 {
-    color: rgb(56, 95, 95);
+    color: rgb(56, 95, 95) 2px;
     font-size: 50px;
     margin-bottom: 10px;
 }
@@ -26,6 +26,7 @@ ul {
     border: solid rgb(56, 95, 95) 2px;
     border-radius: 10px;
     padding: 5px 10px;
+    width: calc(100% / 4);
 }
 
 li {
