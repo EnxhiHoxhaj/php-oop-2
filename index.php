@@ -25,7 +25,7 @@ require_once __DIR__ . '/Model/Db.php';
 <body>
     <div>
         <div id="name">
-            <h1>Pet Shop 'Bau e Miao'</h1>
+            <h1 id="shop-name">Pet Shop 'Bau e Miao'</h1>
         </div>
         <div class="shop">
             <h3>La nostra selezione per il tuo amico a 4 zampe</h3>
@@ -33,7 +33,7 @@ require_once __DIR__ . '/Model/Db.php';
                 <?php foreach ($shopProducts as $dProduct): ?>
                     <ul>
                         <li class="image">
-                            <img src="<?php echo htmlspecialchars($dProduct->image); ?>" alt="">
+                            <img src="<?php echo htmlspecialchars($dProduct->image); ?>" alt="<?php echo $dProduct->getName(); ?>">
                         </li>
                         <li class="info-product">
                             <span><strong>Prodotto: </strong><?php echo $dProduct->getName(); ?></span>
@@ -52,6 +52,9 @@ require_once __DIR__ . '/Model/Db.php';
                         </li>
                         <li class="info-product">
                             <span><strong>Animale: </strong> </strong><?php echo $dProduct->animal ?></span>
+                        </li>
+                        <li class="info-product">
+                            <span><strong>Voto: </strong> </strong><?php echo $dProduct->voteProduct() ?></span>
                         </li>
                     </ul>
                 <?php endforeach; ?>

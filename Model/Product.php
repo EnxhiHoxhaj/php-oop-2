@@ -8,8 +8,10 @@ class Product
     public $description;
     public $price;
     public $animal;
+    public $vote;
 
-    public function __construct($_image, $_name, $_brend, $_categori, $_description, $_price, $_animal)
+
+    public function __construct($_image, $_name, $_brend, $_categori, $_description, $_price, $_animal, $_vote)
     {
         $this->image = $_image;
         $this->setName($_name);
@@ -18,6 +20,7 @@ class Product
         $this->description = $_description;
         $this->price = $_price;
         $this->animal = $_animal;
+        $this->vote = $_vote;
     }
 
     public function getName()
@@ -31,5 +34,9 @@ class Product
             throw new Exception('Il prodotto che hai inserito deve avere almeno 4 caratteri');
         }
         $this->name = $name;
+    }
+    public function voteProduct()
+    {
+        return 'Il prodotto' . ' ' . $this->name . ' ' . 'ha ottenuto' . ' ' . $this->vote . ' ' . 'stelle';
     }
 }
