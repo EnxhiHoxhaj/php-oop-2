@@ -8,7 +8,7 @@ class Product
     public $description;
     public $price;
     public $animal;
-    public $vote;
+    protected $vote;
 
 
     public function __construct($_image, $_name, $_brend, $_categori, $_description, $_price, $_animal, $_vote)
@@ -20,7 +20,7 @@ class Product
         $this->description = $_description;
         $this->price = $_price;
         $this->animal = $_animal;
-        $this->vote = $_vote;
+        $this->setVoteProduct($_vote);
     }
 
     public function getName()
@@ -38,5 +38,14 @@ class Product
     public function voteProduct()
     {
         return 'Il prodotto' . ' ' . $this->name . ' ' . 'ha ottenuto' . ' ' . $this->vote . ' ' . 'stelle';
+    }
+
+
+    public function setVoteProduct($vote)
+    {
+        if ($vote < 1 || $vote > 5) {
+            throw new Exception('Il voto assegnato deve essere almeno di 1 stella e massimo di 5 stelle');
+        }
+        $this->vote = $vote;
     }
 }
