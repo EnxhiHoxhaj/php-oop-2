@@ -6,7 +6,15 @@ require_once __DIR__ . '/Cat.php';
 
 // Prodotti per cani
 
-$prodotto1 = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 4);
+
+try {
+    $correctRating = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 0);
+    $correctRating->setVoteProduct($_vote);
+} catch (Exception $e) {
+    echo 'Errore:' . ' ' . $e->getMessage();
+}
+
+// $prodotto1 = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 4);
 $prodotto2 = new Dog('./img/ferplast-pa-5537-pallina-sonora-per-cani.jpg', 'Palla Rimbalzante', 'Happy Paws', 'Giochi', "Palla resistente e leggera, perfetta per il gioco all'aperto. Realizzata in gomma non tossica, rimbalza e galleggia nell'acqua.", 12.50, 'Cane', 3.8);
 $prodotto3 = new Dog('./img/231098_pla_tetra_8in1_delights_strong_kauknochen_huhn_140g_hs_01_9.jpg', 'Snack Masticabili Pollo Delight', 'Pet Treats', 'Snack', 'Snack morbidi al pollo, ideali per premiare il tuo cane. Alto contenuto proteico e arricchiti con vitamine e minerali.', 8.90, 'Cane', 4.2);
 $prodotto4 = new Dog('./img/collare-per-cani-comfort-line-verde-25-mm.jpg', 'Collare Nylon Comfort', 'Woofy', 'Collari e Guinzagli', 'Collare resistente e leggero, regolabile per un comfort ottimale. Disponibile in vari colori e taglie.', 15.00, 'Cane', 3.5);
