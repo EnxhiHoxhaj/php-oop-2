@@ -8,8 +8,7 @@ require_once __DIR__ . '/Cat.php';
 
 
 try {
-    $correctRating = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 0);
-    $correctRating->setVoteProduct($_vote);
+    $prodotto1 = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 4);
 } catch (Exception $e) {
     echo 'Errore:' . ' ' . $e->getMessage();
 }
