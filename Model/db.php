@@ -12,7 +12,7 @@ try {
 
 
     // $prodotto1 = new Dog('./img/in-the-nature-adult-all-breeds-con-agnello1.webp', 'Croccantini Adulto Genuini', 'Natural Dog', 'Cibo', 'Croccantini ricchi di proteine di alta qualità, con ingredienti naturali per una dieta equilibrata. Senza conservanti artificiali e coloranti.', 29.90, 'Cane', 4);
-    $prodotto2 = new Dog('./img/ferplast-pa-5537-pallina-sonora-per-cani.jpg', 'Palla Rimbalzante', 'Happy Paws', 'Giochi', "Palla resistente e leggera, perfetta per il gioco all'aperto. Realizzata in gomma non tossica, rimbalza e galleggia nell'acqua.", 12.50, 'Cane', 3.8);
+    $prodotto2 = new Dog('./img/ferplast-pa-5537-pallina-sonora-per-cani.jpg', 'Pal', 'Happy Paws', 'Giochi', "Palla resistente e leggera, perfetta per il gioco all'aperto. Realizzata in gomma non tossica, rimbalza e galleggia nell'acqua.", 12.50, 'Cane', 3.8);
     $prodotto3 = new Dog('./img/231098_pla_tetra_8in1_delights_strong_kauknochen_huhn_140g_hs_01_9.jpg', 'Snack Masticabili Pollo Delight', 'Pet Treats', 'Snack', 'Snack morbidi al pollo, ideali per premiare il tuo cane. Alto contenuto proteico e arricchiti con vitamine e minerali.', 8.90, 'Cane', 4.2);
     $prodotto4 = new Dog('./img/collare-per-cani-comfort-line-verde-25-mm.jpg', 'Collare Nylon Comfort', 'Woofy', 'Collari e Guinzagli', 'Collare resistente e leggero, regolabile per un comfort ottimale. Disponibile in vari colori e taglie.', 15.00, 'Cane', 3.5);
 
@@ -23,7 +23,8 @@ try {
     $prodotto7 = new Cat('./img/Perfect-Lettiera-Eco-Cellulosa-per-gatti-10L.webp', 'Lettiera Naturale "Eco Cat"', 'Ökocat', 'Accessori', 'Lettiera composta da materiali naturali e biodegradabili, con un\'eccellente capacità di assorbimento e controllo degli odori. Sicura per gli animali e per l\'ambiente.', 14.50, 'Gatto', 4.2);
     $prodotto8 = new Cat('./img/CrazyCatnipMeows_grande.webp', 'Snack per Gatti "Catnip Bites"', 'Petstages', 'Cibo/Giochi', 'Deliziosi snack croccanti ripieni di erba gatta, ideali per stimolare l\'attività e il gioco. Perfetti come premio durante l\'allenamento o semplicemente per viziare il tuo gatto.', 4.99, 'Gatto', 3.5);
 } catch (Exception $e) {
-    echo 'Errore:' . ' ' . $e->getMessage();
+    echo 'Errore:' . ' ' . 'nel file' . ' ' . $e->getFile() . '- ' . 'alla riga' . '
+    ' . $e->getLine() . '- ' . $e->getMessage();
 }
 
 $shopProducts = [
